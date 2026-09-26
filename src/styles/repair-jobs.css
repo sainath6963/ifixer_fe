@@ -1,0 +1,386 @@
+.repair-job-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.repair-job-heading h1 {
+  margin-bottom: 0.4rem;
+}
+.repair-job-number {
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  overflow-wrap: anywhere;
+}
+.repair-job-filters {
+  display: grid;
+  grid-template-columns: minmax(180px, 2fr) repeat(2, minmax(150px, 1fr)) auto;
+  align-items: end;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+.repair-job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  gap: 1rem;
+}
+.repair-job-card {
+  display: block;
+  min-width: 0;
+  padding: 1.4rem;
+  background: var(--color-surface, white);
+  border: 1px solid #d4dfd8;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  overflow-wrap: anywhere;
+}
+a.repair-job-card:hover {
+  border-color: #10483f;
+}
+.repair-job-card h2 {
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.4rem;
+}
+.repair-job-card__top,
+.repair-job-state,
+.repair-job-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+}
+.repair-job-card__top {
+  justify-content: space-between;
+}
+.repair-job-card dl,
+.repair-job-facts {
+  margin: 1rem 0;
+}
+.repair-job-card dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+.repair-job-card dd,
+.repair-job-facts dd {
+  margin: 0;
+}
+.repair-job-card dt,
+.repair-job-facts dt {
+  color: #536a61;
+  font-size: 0.85rem;
+}
+.repair-job-card dd {
+  text-align: right;
+  font-size: 0.85rem;
+}
+.repair-job-actions {
+  margin-top: 1.5rem;
+}
+.repair-jobs-page button,
+.repair-job-detail button,
+.repair-job-card button {
+  min-height: 44px;
+  cursor: pointer;
+}
+.repair-job-state {
+  padding: 1rem;
+  background: #eaf0e9;
+  border-radius: 10px;
+}
+.repair-job-state .repair-status {
+  text-transform: capitalize;
+}
+.repair-job-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #d4dfd8;
+}
+.repair-job-facts dd {
+  overflow-wrap: anywhere;
+  margin-top: 0.4rem;
+}
+.repair-job-intake {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.repair-job-intake h2 {
+  font-size: 0.9rem;
+}
+.repair-job-intake p,
+.repair-job-history p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.repair-job-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #d4dfd8;
+}
+.repair-job-tabs button {
+  border: 1px solid #ccd8cf;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  background: white;
+  color: #10483f;
+}
+.repair-job-tabs button[aria-current] {
+  background: #10483f;
+  color: white;
+  border-color: #10483f;
+}
+.repair-job-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+.repair-job-form {
+  min-width: 0;
+  padding: 1.2rem;
+  background: white;
+  border: 1px solid #d4dfd8;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.repair-job-form .repair-job-form {
+  border: 0;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.repair-job-form h3 {
+  margin-top: 0;
+}
+.repair-job-form fieldset {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+.repair-job-form legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.repair-job-form textarea {
+  resize: vertical;
+}
+.repair-job-form .repair-field,
+.repair-intake-page .repair-field {
+  min-width: 0;
+}
+.repair-job-form input,
+.repair-job-form select,
+.repair-job-form textarea {
+  max-width: 100%;
+  min-width: 0;
+}
+.repair-job-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.repair-job-checkbox input {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+.repair-test-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+.repair-test-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) minmax(130px, 2fr);
+  gap: 0.8rem;
+}
+.repair-test-row .repair-field:first-child {
+  text-transform: capitalize;
+}
+.repair-test-results {
+  padding: 1rem;
+  border-left: 3px solid #10483f;
+  background: #eaf0e9;
+}
+.repair-estimate {
+  padding: 1.2rem;
+  border: 1px solid #d4dfd8;
+  background: white;
+  border-radius: 10px;
+  margin: 1rem 0;
+  overflow-wrap: anywhere;
+}
+.repair-estimate header,
+.repair-estimate li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.repair-estimate h3 {
+  margin: 0;
+}
+.repair-estimate ul {
+  padding: 0;
+  list-style: none;
+}
+.repair-estimate li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e6eae5;
+}
+.repair-estimate-line {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(70px, 0.5fr) minmax(100px, 1fr);
+  gap: 0.7rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #d4dfd8;
+}
+.repair-estimate-line > button {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+.repair-job-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 1rem;
+}
+.repair-job-photos figure {
+  margin: 0 0 1rem;
+}
+.repair-job-photos img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #eaf0e9;
+  border-radius: 10px;
+}
+.repair-job-photos figcaption {
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+}
+.repair-job-history {
+  list-style: none;
+  padding: 0;
+}
+.repair-job-history li {
+  border-left: 3px solid #d9c8ac;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+}
+.repair-job-history strong {
+  text-transform: capitalize;
+}
+.repair-job-receipt {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .repair-job-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .repair-job-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .repair-job-filters,
+  .repair-job-form-grid,
+  .repair-job-intake,
+  .repair-estimate-line {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .repair-job-card,
+  .repair-job-form {
+    padding: 1rem;
+  }
+  .repair-test-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .repair-job-tabs button {
+    flex: 1 1 45%;
+    font-size: 0.85rem;
+  }
+  .repair-job-heading .repair-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm;
+  }
+  body {
+    background: white !important;
+    color: #111 !important;
+    font-size: 11pt;
+  }
+  .admin-sidebar,
+  .skip-link,
+  .no-print {
+    display: none !important;
+  }
+  .admin-shell,
+  .admin-content,
+  .admin-page {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .admin-shell,
+  .admin-content,
+  .repair-job-receipt {
+    background: white !important;
+  }
+  .repair-job-receipt {
+    display: block !important;
+  }
+  .repair-job-receipt header {
+    border-bottom: 2px solid #10483f;
+    padding-bottom: 1rem;
+  }
+  .repair-job-receipt header > strong {
+    font-size: 26pt;
+    color: #10483f;
+  }
+  .repair-job-receipt h1 {
+    font-size: 18pt;
+  }
+  .repair-job-receipt dl > div {
+    display: grid;
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #ddd;
+    break-inside: avoid;
+  }
+  .repair-job-receipt dt {
+    font-weight: bold;
+  }
+  .repair-job-receipt dd {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .repair-receipt-signatures {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+    break-inside: avoid;
+  }
+}

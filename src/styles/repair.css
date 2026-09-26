@@ -1,0 +1,1677 @@
+/* Public repair surfaces; shared colors also apply to the existing commerce UI. */
+.repair-site {
+  --space-page: clamp(1.25rem, 5.5vw, 6rem);
+}
+.repair-announcement {
+  padding: 0.55rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-accent);
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+.repair-header {
+  min-height: 96px;
+  background: var(--color-background);
+}
+.repair-header .brand__name,
+.repair-footer .brand__name {
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.075em;
+}
+.repair-header .brand__mark {
+  border-radius: 9px;
+  height: 35px;
+  width: 29px;
+  font-size: 1rem;
+  letter-spacing: -0.1em;
+  border-width: 1.5px;
+}
+.brand__dot {
+  color: var(--color-accent-strong);
+}
+.repair-header .desktop-nav,
+.repair-header .header-actions {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8rem;
+}
+.repair-account-link {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+}
+.repair-header .menu-button {
+  min-height: 44px;
+  min-width: 66px;
+  text-transform: none;
+  font-size: 0.85rem;
+}
+.repair-header .mobile-nav {
+  box-shadow: 0 14px 20px rgb(16 72 63 / 8%);
+}
+.repair-hero {
+  display: grid;
+  grid-template-columns: 1.02fr 1fr;
+  padding: 2.5rem var(--space-page) 3.75rem;
+  align-items: center;
+  gap: 4.5rem;
+  max-width: 1600px;
+  margin: auto;
+}
+.repair-eyebrow {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.repair-eyebrow > span:empty {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentcolor;
+}
+.repair-hero h1 {
+  margin: 1.7rem 0 1.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(3.3rem, 6vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+.repair-hero h1 em,
+.repair-closing h2 em {
+  font-weight: 400;
+}
+.repair-intro {
+  color: var(--color-muted);
+  line-height: 1.9;
+  font-size: 0.95rem;
+  max-width: 31rem;
+}
+.repair-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.repair-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  min-height: 50px;
+  padding: 0.85rem 1.35rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+.repair-button:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+.repair-button span {
+  font-size: 1.1rem;
+}
+.repair-button--gold {
+  background: var(--color-accent);
+  color: var(--color-primary-hover);
+}
+.repair-button--gold:hover {
+  background: #e9dac1;
+}
+.repair-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 44px;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--color-line);
+}
+.repair-text-link:hover {
+  text-decoration-color: currentcolor;
+}
+.repair-hero__note {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 2.7rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--color-line);
+  max-width: 27rem;
+}
+.repair-hero__note > span {
+  color: var(--color-accent-strong);
+  font-size: 1.15rem;
+}
+.repair-hero__note p {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+}
+.phone-scene {
+  min-height: 500px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 7px;
+  background: radial-gradient(ellipse at 80% 28%, #32695a 0, #164b40 45%, #103b33 100%);
+  color: var(--color-accent);
+}
+.phone-scene__label {
+  position: absolute;
+  left: 1.8rem;
+  top: 1.6rem;
+  font-size: 0.56rem;
+  letter-spacing: 0.16em;
+}
+.phone-scene__orbit {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgb(217 200 172 / 18%);
+  border-radius: 50%;
+  z-index: -1;
+}
+.phone-scene__orbit--two {
+  width: 580px;
+  height: 580px;
+}
+.repair-phone {
+  position: relative;
+  width: 206px;
+  height: 386px;
+  padding: 7px;
+  border: 2px solid #cabb9f;
+  border-radius: 34px;
+  background: #192c25;
+  transform: rotate(-12deg);
+  box-shadow:
+    20px 30px 50px rgb(0 0 0 / 38%),
+    inset 0 0 0 2px #655d4e;
+}
+.repair-phone::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 44px;
+  background: #cabb9f;
+  right: -5px;
+  top: 91px;
+  border-radius: 2px;
+}
+.repair-phone__camera {
+  position: absolute;
+  z-index: 2;
+  width: 61px;
+  height: 16px;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #152a23;
+  border-radius: 20px;
+}
+.repair-phone__screen {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 25px;
+  background: #e3d5bc;
+  color: var(--color-primary);
+  padding: 40px 18px 18px;
+}
+.repair-phone__brand {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+.repair-phone__screen p {
+  position: relative;
+  z-index: 1;
+  margin-top: 36px;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+.repair-phone__art {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  top: 168px;
+  left: -50px;
+  border-radius: 50%;
+  border: 31px solid #aeb49b;
+  box-shadow:
+    0 0 0 20px #c6c6ac,
+    inset 0 0 0 22px #718d76;
+  transform: rotate(40deg);
+}
+.repair-phone__bottom {
+  position: absolute;
+  bottom: 24px;
+  left: 22px;
+  color: #173d32;
+  font-size: 0.45rem;
+  letter-spacing: 0.16em;
+}
+.phone-scene__chip {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  position: absolute;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgb(217 200 172 / 40%);
+  border-radius: 5px;
+  background: rgb(15 57 49 / 90%);
+  color: #f5eddf;
+  font-size: 0.67rem;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+}
+.phone-scene__chip--screen {
+  top: 31%;
+  right: 5%;
+}
+.phone-scene__chip--battery {
+  bottom: 21%;
+  left: 6%;
+}
+.phone-scene__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.8rem;
+  right: 1.8rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+}
+.phone-scene__footer > span:last-child {
+  font-size: 1.6rem;
+}
+.repair-symbol {
+  display: inline-block;
+  position: relative;
+  width: 19px;
+  height: 27px;
+  border: 1.5px solid currentcolor;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.repair-symbol--screen::after {
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 6px;
+  border-left: 1px solid currentcolor;
+  border-bottom: 1px solid currentcolor;
+  top: 4px;
+  left: 7px;
+  transform: skew(-20deg);
+}
+.repair-symbol--battery {
+  width: 29px;
+  height: 16px;
+  border-radius: 3px;
+}
+.repair-symbol--battery::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: 14px;
+  background: currentcolor;
+  border-radius: 1px;
+}
+.repair-symbol--battery::after {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 3px;
+  right: -5px;
+  top: 3.5px;
+  background: currentcolor;
+  border-radius: 1px;
+}
+.repair-symbol--charging {
+  width: 20px;
+  height: 22px;
+  border-radius: 3px 3px 8px 8px;
+}
+.repair-symbol--charging::before {
+  content: '';
+  position: absolute;
+  height: 7px;
+  width: 8px;
+  top: -8px;
+  left: 4px;
+  border-left: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+}
+.repair-symbol--charging::after {
+  content: '';
+  position: absolute;
+  height: 9px;
+  width: 10px;
+  border-left: 1.5px solid currentcolor;
+  border-bottom: 1.5px solid currentcolor;
+  left: 7px;
+  bottom: -9px;
+  border-radius: 0 0 0 4px;
+}
+.repair-values {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem var(--space-page);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  font-size: 0.7rem;
+  color: var(--color-muted);
+}
+.repair-values > span[aria-hidden] {
+  color: var(--color-accent-strong);
+}
+.repair-section {
+  padding: 5.2rem var(--space-page);
+  max-width: 1600px;
+  margin: auto;
+}
+.repair-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.3rem;
+}
+.repair-section h2,
+.repair-closing h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 3.5vw, 3.7rem);
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+  margin-top: 0.7rem;
+}
+.repair-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.repair-service-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  padding: 1.8rem;
+  border-radius: 5px;
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+.repair-service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+.repair-service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 45px;
+  margin-bottom: 1.8rem;
+}
+.repair-service-card__top > span:last-child {
+  color: var(--color-muted);
+  font-size: 0.63rem;
+}
+.repair-service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.65rem;
+}
+.repair-service-card p {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.repair-service-card__link {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.7rem;
+}
+.repair-process {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  border-top: 1px solid var(--color-line);
+}
+.repair-process .repair-text-link {
+  margin-top: 1.5rem;
+}
+.repair-process ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.repair-process li {
+  display: flex;
+  gap: 1.4rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.repair-process li:first-child {
+  padding-top: 0;
+}
+.repair-process li > span {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--color-accent-strong);
+}
+.repair-process h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.repair-process p:not(.repair-eyebrow) {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+.repair-closing {
+  text-align: center;
+  padding: 5rem var(--space-page);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.repair-closing .repair-eyebrow {
+  justify-content: center;
+  color: var(--color-accent);
+}
+.repair-closing h2 {
+  font-size: clamp(2.5rem, 4.6vw, 4.8rem);
+  margin: 1rem 0 2rem;
+}
+.repair-footer {
+  padding: 3.5rem var(--space-page) 1.4rem;
+  gap: 3rem;
+  background: var(--color-primary-hover);
+}
+.repair-footer > div:first-child p {
+  font-size: 0.8rem;
+  line-height: 1.9;
+  color: #d9e1dc;
+}
+.repair-footer__nav {
+  display: flex;
+  gap: 5rem;
+  font-size: 0.75rem;
+}
+.repair-footer__nav > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.7rem;
+}
+.repair-footer__nav p {
+  color: var(--color-accent);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+.repair-footer__nav a,
+.repair-footer__nav summary {
+  min-height: 30px;
+}
+.repair-footer__nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.repair-legacy-links summary {
+  cursor: pointer;
+  color: #d9e1dc;
+}
+.repair-legacy-links a {
+  display: block;
+  padding-block: 0.45rem;
+}
+.repair-footer__bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 18%);
+  padding-top: 1.25rem;
+  font-size: 0.64rem;
+  color: #d9e1dc;
+}
+.repair-footer__bottom > span {
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+}
+.repair-site :focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 4px;
+}
+.repair-site main:focus {
+  outline: none;
+}
+@media (min-width: 961px) {
+  .repair-header .mobile-nav {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .repair-hero {
+    gap: 2.5rem;
+  }
+  .phone-scene {
+    min-height: 460px;
+  }
+  .repair-process {
+    gap: 3rem;
+  }
+}
+@media (max-width: 960px) {
+  .repair-header {
+    min-height: 80px;
+  }
+  .repair-header .header-actions .repair-account-link {
+    display: none;
+  }
+  .repair-hero {
+    gap: 2rem;
+  }
+  .repair-hero h1 {
+    font-size: 3.7rem;
+  }
+  .phone-scene {
+    min-height: 430px;
+  }
+  .repair-phone {
+    transform: rotate(-12deg) scale(0.88);
+  }
+  .phone-scene__chip {
+    padding: 0.6rem;
+  }
+  .phone-scene__chip--screen {
+    right: 3%;
+  }
+  .phone-scene__chip--battery {
+    left: 3%;
+  }
+  .repair-values {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .repair-values > span:last-child {
+    display: none;
+  }
+  .repair-values > span:nth-last-child(2) {
+    display: none;
+  }
+  .repair-card-grid {
+    gap: 0.75rem;
+  }
+  .repair-service-card {
+    padding: 1.25rem;
+  }
+  .repair-footer__nav {
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .repair-hero {
+    grid-template-columns: 1fr;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    gap: 2.3rem;
+  }
+  .repair-hero h1 {
+    font-size: clamp(3.4rem, 12vw, 5rem);
+  }
+  .repair-hero__note {
+    margin-top: 1.8rem;
+  }
+  .phone-scene {
+    min-height: 420px;
+  }
+  .repair-phone {
+    transform: rotate(-12deg) scale(0.9);
+  }
+  .phone-scene__chip--screen {
+    right: 7%;
+  }
+  .phone-scene__chip--battery {
+    left: 7%;
+  }
+  .repair-section {
+    padding-block: 3.3rem;
+  }
+  .repair-section-heading {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.8rem;
+  }
+  .repair-card-grid,
+  .repair-process {
+    grid-template-columns: 1fr;
+  }
+  .repair-service-card {
+    padding: 1.5rem;
+  }
+  .repair-service-card__top {
+    margin-bottom: 1rem;
+  }
+  .repair-service-card p {
+    max-width: 30rem;
+  }
+  .repair-values {
+    gap: 0.65rem;
+    font-size: 0.6rem;
+  }
+  .repair-values > span:nth-child(5),
+  .repair-values > span:nth-child(4) {
+    display: none;
+  }
+  .repair-process {
+    gap: 2rem;
+  }
+  .repair-closing {
+    padding-block: 3.7rem;
+  }
+  .repair-footer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .repair-footer__nav {
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .repair-footer__bottom {
+    flex-direction: column;
+    align-items: start;
+  }
+  .repair-footer__nav a,
+  .repair-footer__nav summary {
+    min-height: 36px;
+  }
+  .repair-header .brand__name {
+    font-size: 2rem;
+  }
+}
+.repair-page-heading {
+  padding: 4.2rem var(--space-page) 3.5rem;
+  border-bottom: 1px solid var(--color-line);
+  max-width: 1600px;
+  margin: auto;
+}
+.repair-page-heading h1 {
+  margin: 1rem 0 1.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+.repair-page-heading > p:not(.repair-eyebrow) {
+  max-width: 38rem;
+  color: var(--color-muted);
+  line-height: 1.9;
+}
+.repair-jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 2rem;
+}
+.repair-jump-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 44px;
+  border: 1px solid var(--color-line);
+  padding: 0.55rem 0.85rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+.repair-jump-links a:hover {
+  background: var(--color-primary);
+  color: white;
+}
+.repair-services {
+  padding-top: 3rem;
+}
+.repair-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.repair-detail-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 5px;
+  scroll-margin-top: 1.5rem;
+}
+.repair-detail-card:target {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+.repair-detail-card h2 {
+  margin: 0 0 1rem;
+  font-size: 2.15rem;
+}
+.repair-detail-card p {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.repair-detail-card .repair-detail-card__issue {
+  color: var(--color-text);
+  font-weight: 500;
+}
+.repair-detail-card .repair-text-link {
+  align-self: start;
+  margin-top: auto;
+}
+.repair-symbol--audio::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-top: 2px dotted currentcolor;
+  border-bottom: 2px dotted currentcolor;
+}
+.repair-symbol--camera {
+  width: 28px;
+  height: 22px;
+}
+.repair-symbol--camera::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid currentcolor;
+  border-radius: 50%;
+  top: 4px;
+  left: 7px;
+}
+.repair-info-note {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  background: #eaf0eb;
+  border-radius: 4px;
+}
+.repair-info-note p {
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+.repair-info-note > span {
+  color: var(--color-accent-strong);
+  font-size: 1.5rem;
+}
+.repair-faq {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 5rem;
+  border-top: 1px solid var(--color-line);
+  scroll-margin-top: 1rem;
+}
+.repair-faq > div > p:last-child {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+.repair-faq details {
+  border-bottom: 1px solid var(--color-line);
+}
+.repair-faq summary {
+  cursor: pointer;
+  padding-block: 1.3rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  list-style: none;
+}
+.repair-faq summary::-webkit-details-marker {
+  display: none;
+}
+.repair-faq summary span {
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.repair-faq details[open] summary span {
+  transform: rotate(45deg);
+}
+.repair-faq details p {
+  padding-bottom: 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.9;
+}
+.repair-contact-banner {
+  padding: 3rem var(--space-page);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #e8ede7;
+}
+.repair-contact-banner h2 {
+  margin-top: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.04em;
+}
+.repair-about-heading {
+  padding-block: 5rem;
+}
+.repair-about-note {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+  padding: 4rem var(--space-page);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.repair-about-note > span {
+  display: grid;
+  place-items: center;
+  width: min(100%, 290px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(217 200 172 / 55%);
+  border-radius: 50%;
+  justify-self: center;
+  outline: 1px solid rgb(217 200 172 / 20%);
+  outline-offset: 16px;
+  font-family: var(--font-display);
+  font-size: 9rem;
+  font-style: italic;
+  letter-spacing: -0.12em;
+  padding-right: 0.1em;
+  color: var(--color-accent);
+}
+.repair-about-note .repair-eyebrow {
+  color: var(--color-accent);
+}
+.repair-about-note h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 3.5vw, 3.7rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  margin: 1rem 0 1.5rem;
+}
+.repair-about-note p:last-child {
+  max-width: 34rem;
+  color: #e0e7e2;
+  line-height: 1.9;
+  font-size: 0.9rem;
+}
+.repair-principle {
+  border-top: 1px solid var(--color-line);
+  padding-top: 1.5rem;
+}
+.repair-principle > span {
+  color: var(--color-accent-strong);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+.repair-principle h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-block: 1.5rem 1rem;
+}
+.repair-principle p {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.9;
+}
+.repair-contact-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  padding-top: 3.5rem;
+}
+.repair-contact-layout h2 {
+  font-size: 2.3rem;
+}
+.repair-contact-pending {
+  padding-block: 1rem 2rem;
+}
+.repair-contact-pending > span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+.repair-contact-pending p {
+  margin-block: 1rem;
+  color: var(--color-muted);
+  line-height: 1.9;
+  max-width: 27rem;
+}
+.repair-enquiry-context {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 3px solid var(--color-primary);
+  background: #eaf0eb;
+}
+.repair-enquiry-context h2 {
+  font-size: 1.7rem;
+}
+.repair-contact-options {
+  display: grid;
+  gap: 1rem;
+}
+.repair-contact-options > * {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  background: var(--color-surface);
+  overflow-wrap: anywhere;
+}
+.repair-contact-options > a:hover {
+  border-color: var(--color-primary);
+}
+.repair-contact-options span:first-child {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+.repair-contact-options strong,
+.repair-contact-options address {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7rem;
+  white-space: pre-line;
+}
+.repair-contact-options span:last-child {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.repair-contact-hours {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-line);
+  white-space: pre-line;
+}
+.repair-contact-hours > p:last-child {
+  margin-top: 0.75rem;
+}
+.repair-visit-guide {
+  background: #ecefe7;
+  border-radius: 5px;
+  padding: 2rem;
+  align-self: start;
+}
+.repair-visit-guide ol {
+  padding-left: 1.3rem;
+  margin-block: 1.75rem;
+}
+.repair-visit-guide li {
+  padding-left: 0.5rem;
+  margin-bottom: 1.4rem;
+  font-size: 0.85rem;
+}
+.repair-visit-guide li::marker {
+  color: var(--color-primary);
+}
+.repair-visit-guide li p {
+  margin-top: 0.35rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+.repair-visit-guide__note {
+  border-top: 1px solid var(--color-line);
+  padding-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+.admin-sidebar {
+  overflow-y: auto;
+}
+.admin-sidebar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.admin-sidebar__top .brand {
+  color: var(--color-accent);
+}
+.admin-menu-button {
+  display: none;
+}
+.admin-navigation-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.admin-navigation-panel .admin-sidebar__label {
+  margin: 1.5rem 0 0.7rem;
+  color: var(--color-accent);
+}
+.admin-navigation-panel nav .admin-nav-group {
+  margin: 1rem 0 0.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  color: var(--color-accent);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.admin-navigation-panel nav a {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+}
+.admin-sidebar__identity button {
+  min-height: 44px;
+}
+.admin-security-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.admin-security-grid > * {
+  min-width: 0;
+}
+.admin-security-profile {
+  grid-column: 1 / -1;
+}
+.admin-security-profile .admin-detail-list > div {
+  grid-template-columns: minmax(4rem, 0.25fr) minmax(0, 1fr);
+}
+.admin-security-grid .admin-check-field {
+  overflow-wrap: anywhere;
+}
+.admin-security-grid .admin-check-field input {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  padding: 0;
+}
+@media (max-width: 800px) {
+  .admin-security-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 960px) {
+  .admin-sidebar {
+    padding: 1rem 1.25rem;
+    overflow: visible;
+  }
+  .admin-sidebar__top .brand {
+    padding: 0;
+    border: 0;
+  }
+  .admin-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.6rem 0.85rem;
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+  .admin-navigation-panel {
+    display: none;
+  }
+  .admin-navigation-panel[data-open='true'] {
+    display: flex;
+    padding-top: 1rem;
+  }
+  .admin-navigation-panel nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem 1rem;
+    overflow: visible;
+  }
+  .admin-navigation-panel nav .admin-nav-group {
+    grid-column: 1 / -1;
+  }
+  .admin-navigation-panel .admin-sidebar__identity {
+    position: static;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgb(255 255 255 / 20%);
+    text-align: left;
+  }
+  .admin-navigation-panel .admin-sidebar__identity p,
+  .admin-navigation-panel .admin-sidebar__identity span {
+    display: block;
+  }
+  .admin-navigation-panel .admin-sidebar__store {
+    margin-top: 0.5rem;
+    min-height: 44px;
+  }
+  .repair-faq,
+  .repair-contact-layout {
+    gap: 2rem;
+  }
+  .repair-about-note {
+    gap: 3rem;
+  }
+}
+@media (max-width: 700px) {
+  .repair-page-heading {
+    padding-block: 2.5rem;
+  }
+  .repair-page-heading h1 {
+    font-size: clamp(2.9rem, 11vw, 4rem);
+  }
+  .repair-page-heading > p:not(.repair-eyebrow) {
+    font-size: 0.9rem;
+  }
+  .repair-detail-grid,
+  .repair-faq,
+  .repair-contact-layout,
+  .repair-about-note {
+    grid-template-columns: 1fr;
+  }
+  .repair-detail-card {
+    padding: 1.5rem;
+  }
+  .repair-contact-banner {
+    flex-direction: column;
+    align-items: start;
+  }
+  .repair-about-note {
+    padding-block: 3.5rem;
+    gap: 3rem;
+  }
+  .repair-about-note > span {
+    width: 180px;
+    font-size: 6rem;
+  }
+  .repair-principle {
+    padding-block: 1.5rem;
+  }
+  .repair-visit-guide {
+    padding: 1.5rem;
+  }
+  .repair-jump-links a {
+    font-size: 0.7rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .repair-site *,
+  .repair-site *::before,
+  .repair-site *::after {
+    scroll-behavior: auto;
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Repair catalog and booking workflows. */
+.repair-booking-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 5vw, 5rem);
+}
+.repair-booking-form {
+  display: grid;
+  gap: 1.5rem;
+  min-width: 0;
+}
+.repair-booking-form fieldset {
+  display: grid;
+  gap: 1.2rem;
+  min-width: 0;
+  margin: 0;
+  padding: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--color-line);
+}
+.repair-booking-form legend {
+  padding-right: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.repair-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.repair-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+  font-size: 0.8rem;
+}
+.repair-field input,
+.repair-field select,
+.repair-field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0.8rem;
+  border: 1px solid #aebeb6;
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.repair-field textarea {
+  resize: vertical;
+}
+.repair-field input:focus-visible,
+.repair-field select:focus-visible,
+.repair-field textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+.repair-field input:disabled,
+.repair-field select:disabled {
+  opacity: 0.7;
+}
+.repair-booking-form .repair-button {
+  justify-self: start;
+}
+.repair-button:disabled,
+.repair-secondary-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+.repair-price-note {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+.repair-form-notice {
+  padding: 1.4rem;
+  margin-block: 1rem;
+  background: #eaf0eb;
+  border-left: 3px solid var(--color-primary);
+  line-height: 1.8;
+}
+.repair-form-error {
+  padding: 1rem;
+  color: #822d23;
+  background: #fff1ed;
+  border: 1px solid #cf9187;
+  border-radius: 4px;
+}
+.repair-booking-result {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 3rem);
+  background: #eaf0eb;
+  border: 1px solid var(--color-line);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.repair-booking-result h2,
+.repair-booking-detail h2,
+.repair-walk-in h2,
+.repair-catalog-admin h2 {
+  font: 400 clamp(1.7rem, 2.8vw, 2.5rem)/1.15 var(--font-display);
+  letter-spacing: -0.03em;
+}
+.repair-secondary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  min-height: 44px;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-primary);
+  background: transparent;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.repair-booking-detail {
+  max-width: 1300px;
+}
+.repair-booking-detail > h1 {
+  font: 400 clamp(2.6rem, 5vw, 4rem)/1.1 var(--font-display);
+  margin-block: 1rem;
+}
+.repair-booking-reference {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+}
+.repair-booking-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  border: 1px solid var(--color-line);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  margin-block: 2rem;
+  background: var(--color-surface);
+}
+.repair-booking-summary h2 {
+  margin-block: 1.2rem;
+}
+.repair-booking-summary p {
+  margin-block: 0.75rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.repair-booking-summary dl {
+  margin: 0;
+}
+.repair-booking-summary dl > div {
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--color-line);
+}
+.repair-booking-summary dt,
+.repair-queue dt {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  margin-bottom: 0.35rem;
+}
+.repair-booking-summary dd,
+.repair-queue dd {
+  margin: 0;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+.repair-status {
+  display: inline-block;
+  background: #eaf0eb;
+  border: 1px solid #9dac9f;
+  border-radius: 3px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+}
+.repair-change-form {
+  max-width: 650px;
+  margin-block: 3rem;
+}
+.repair-change-form > p {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+.repair-access-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 650px;
+  margin-block: 1rem;
+}
+.repair-booking-history {
+  margin-block: 3rem;
+}
+.repair-booking-history ol {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.repair-booking-history li {
+  padding: 1rem 1.5rem;
+  margin-block: 1rem;
+  border-left: 2px solid var(--color-accent);
+  background: var(--color-surface);
+  overflow-wrap: anywhere;
+}
+.repair-booking-history strong {
+  font-size: 0.75rem;
+}
+.repair-booking-history time {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  margin-block: 0.5rem;
+}
+.repair-booking-history p {
+  margin-block: 0.5rem;
+  font-size: 0.85rem;
+}
+.repair-admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 2rem;
+}
+.repair-admin-tabs button {
+  padding: 0.8rem 1rem;
+  min-height: 44px;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+}
+.repair-admin-tabs button[aria-pressed='true'] {
+  background: var(--color-primary);
+  color: white;
+}
+.repair-catalog-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+.repair-catalog-list-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-block: 1rem;
+}
+.repair-catalog-list {
+  list-style: none;
+  padding: 0;
+}
+.repair-catalog-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.repair-catalog-list li > div {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.repair-catalog-list li strong {
+  font-size: 0.95rem;
+}
+.repair-catalog-list li span {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+}
+.repair-catalog-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+.repair-checkbox {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.8rem;
+  min-height: 44px;
+}
+.repair-checkbox input {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  accent-color: var(--color-primary);
+}
+.repair-booking-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+.repair-booking-filters button {
+  min-height: 48px;
+}
+.repair-booking-count {
+  margin-block: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.repair-queue {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.repair-queue-card {
+  border: 1px solid var(--color-line);
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+.repair-queue-card__top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--color-muted);
+}
+.repair-queue-card h2 {
+  margin-block: 1.2rem 0.75rem;
+  font: 400 1.7rem/1.2 var(--font-display);
+}
+.repair-queue-card p {
+  font-size: 0.85rem;
+  margin-block: 0.5rem;
+}
+.repair-queue-card dl {
+  margin-block: 1.25rem;
+}
+.repair-walk-in {
+  max-width: 900px;
+  padding: 1.5rem;
+  border: 1px solid var(--color-line);
+  background: white;
+  margin-block: 2rem;
+}
+.repair-walk-in > h2 {
+  margin-bottom: 2rem;
+}
+.repair-page-heading > .repair-button {
+  margin-top: 1.5rem;
+}
+.repair-live-services {
+  margin-bottom: 3rem;
+}
+.repair-live-services h2 {
+  margin-block: 1rem;
+}
+.repair-live-service {
+  padding: 1.5rem;
+  border: 1px solid var(--color-line);
+  margin-block: 1rem;
+  background: white;
+}
+.repair-live-service h3 {
+  font: 400 1.6rem/1.2 var(--font-display);
+}
+.repair-live-service p {
+  margin-block: 0.75rem;
+  color: var(--color-muted);
+}
+.repair-booking-lookup {
+  margin-top: 2rem;
+}
+@media (max-width: 1100px) {
+  .repair-booking-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .repair-booking-layout > aside {
+    max-width: 700px;
+  }
+}
+@media (max-width: 760px) {
+  .repair-catalog-workspace,
+  .repair-booking-summary,
+  .repair-queue {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .repair-booking-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .repair-catalog-form {
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .repair-fields-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+button.repair-text-link {
+  border: 0;
+  border-bottom: 1px solid var(--color-line);
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  min-height: 44px;
+}

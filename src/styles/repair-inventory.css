@@ -1,0 +1,132 @@
+.stock-page {
+  min-width: 0;
+}
+.stock-page h1,
+.stock-page h2,
+.stock-page h3,
+.stock-page p {
+  overflow-wrap: anywhere;
+}
+.stock-page fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  gap: 1rem;
+}
+.stock-page fieldset:disabled {
+  opacity: 0.65;
+}
+.stock-page .repair-job-form {
+  margin-block: 1.25rem;
+}
+.stock-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+  margin-block: 1.5rem;
+}
+.stock-toolbar > .repair-field {
+  flex: 1 1 250px;
+}
+.stock-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1rem;
+}
+.stock-card {
+  min-width: 0;
+  border: 1px solid #d9c8ac;
+  border-radius: 16px;
+  padding: 1.25rem;
+  background: #fff;
+}
+.stock-card header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.stock-card h2 {
+  font-size: 1.25rem;
+}
+.stock-card a {
+  color: #10483f;
+}
+.stock-card p {
+  line-height: 1.65;
+}
+.stock-counts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+}
+.stock-counts dt {
+  font-size: 0.75rem;
+  color: #49645c;
+}
+.stock-counts dd {
+  margin: 0.35rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #10483f;
+}
+.stock-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 1.5rem;
+}
+.stock-page button {
+  min-height: 44px;
+  cursor: pointer;
+}
+.stock-page button:disabled {
+  cursor: default;
+}
+.stock-disclosure {
+  background: #f7f7f2;
+  border: 1px solid #d9c8ac;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-block: 1rem;
+}
+.stock-page summary {
+  min-height: 44px;
+  padding-block: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.stock-purchase-line {
+  border: 1px solid #d9c8ac;
+  border-radius: 12px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+.stock-page input,
+.stock-page select,
+.stock-page textarea {
+  max-width: 100%;
+  min-width: 0;
+}
+.stock-page select[multiple] {
+  min-height: 140px;
+}
+@media (max-width: 480px) {
+  .stock-counts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stock-toolbar > .repair-button {
+    width: 100%;
+  }
+  .stock-card {
+    padding: 1rem;
+  }
+}

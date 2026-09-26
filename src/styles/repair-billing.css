@@ -1,0 +1,228 @@
+.billing-totals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.billing-totals > div {
+  padding: 1rem;
+  border: 1px solid #d9c8ac;
+  background: #f7f7f2;
+  border-radius: 12px;
+}
+.billing-totals dt {
+  color: #49645c;
+  font-size: 0.85rem;
+}
+.billing-totals dd {
+  margin: 0.5rem 0 0;
+  color: #10483f;
+  font-size: 1.3rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.billing-warranty {
+  padding: 1rem 0;
+}
+.billing-warranty p,
+.billing-document p {
+  white-space: pre-line;
+}
+.billing-document {
+  max-width: 850px;
+  margin: 1.5rem auto;
+  padding: 2rem;
+  background: white;
+  border: 1px solid #d9c8ac;
+  border-radius: 12px;
+  color: #173f36;
+  overflow-wrap: anywhere;
+}
+.billing-issuer {
+  border-bottom: 2px solid #10483f;
+  padding-bottom: 1rem;
+}
+.billing-issuer > strong {
+  font-size: 1.7rem;
+}
+.billing-issuer p {
+  margin-top: 0.5rem;
+}
+.billing-document-title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+.billing-document-title h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.billing-document-section {
+  padding-block: 1rem;
+  border-bottom: 1px solid #d9c8ac;
+}
+.billing-document-section h2 {
+  font-size: 1.2rem;
+}
+.billing-document-section p {
+  margin-block: 0.6rem;
+  line-height: 1.6;
+}
+.billing-lines {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-block: 1rem;
+}
+.billing-lines th,
+.billing-lines td {
+  padding: 0.8rem 0.4rem;
+  border-bottom: 1px solid #d9c8ac;
+  text-align: right;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.billing-lines th:first-child,
+.billing-lines td:first-child {
+  text-align: left;
+}
+.billing-document-totals {
+  margin: 1rem 0 1rem auto;
+  max-width: 440px;
+}
+.billing-document-totals > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.6rem;
+}
+.billing-document-totals dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.billing-mobile-label {
+  display: none;
+}
+.billing-grand-total {
+  border-block: 1px solid #10483f;
+  font-size: 1.15rem;
+}
+.billing-document footer {
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.billing-document-note {
+  margin-top: 1.5rem;
+}
+@media screen and (max-width: 600px) {
+  .billing-document {
+    padding: 1rem;
+  }
+  .billing-lines {
+    display: block;
+    font-size: 0.9rem;
+  }
+  .billing-lines colgroup,
+  .billing-lines thead {
+    display: none;
+  }
+  .billing-lines tbody,
+  .billing-lines tr {
+    display: block;
+    width: 100%;
+  }
+  .billing-lines tr {
+    padding-block: 0.8rem;
+    border-bottom: 1px solid #d9c8ac;
+  }
+  .billing-lines td {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+    padding: 0.3rem 0;
+  }
+  .billing-lines td:first-child {
+    display: block;
+    padding-bottom: 0.6rem;
+  }
+  .billing-lines td:not(:first-child) > span:last-child {
+    white-space: nowrap;
+  }
+  .billing-mobile-label {
+    display: inline;
+    text-align: left;
+    color: #49645c;
+  }
+}
+@media print {
+  .billing-document {
+    border: 0;
+    border-radius: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 10pt;
+  }
+  .billing-issuer {
+    padding-bottom: 0.6rem;
+  }
+  .billing-issuer > strong {
+    font-size: 18pt;
+  }
+  .billing-document-title {
+    margin-block: 0.8rem;
+  }
+  .billing-document-title h1 {
+    font-size: 16pt;
+  }
+  .billing-document-section {
+    padding-block: 0.6rem;
+  }
+  .billing-document-section h2 {
+    font-size: 12pt;
+    break-after: avoid;
+  }
+  .billing-document-section p {
+    margin-block: 0.3rem;
+    line-height: 1.4;
+  }
+  .billing-lines th,
+  .billing-lines td {
+    padding-block: 0.5rem;
+  }
+  .billing-document-totals {
+    margin-block: 0.6rem;
+    break-inside: avoid;
+  }
+  .billing-document-totals > div {
+    padding-block: 0.3rem;
+  }
+  .billing-grand-total {
+    font-size: 11pt;
+  }
+  .billing-issuer,
+  .billing-document-title,
+  .billing-grand-total,
+  .billing-lines tr {
+    break-inside: avoid;
+  }
+  .billing-lines thead {
+    display: table-header-group;
+  }
+  .billing-document footer {
+    font-size: 9pt;
+    padding-top: 0.8rem;
+  }
+  .billing-print-page {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

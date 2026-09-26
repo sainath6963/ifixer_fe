@@ -1,0 +1,99 @@
+.workshop-reels__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.workshop-reel {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #d9c8ac;
+  border-radius: 16px;
+}
+.workshop-reel iframe {
+  display: block;
+  width: 100%;
+  height: 660px;
+  border: 0;
+  background: #f7f7f2;
+}
+.workshop-reel__caption {
+  padding: 1.2rem;
+  display: grid;
+  gap: 0.75rem;
+  overflow-wrap: anywhere;
+}
+.workshop-reel__caption h3 {
+  font-size: 1.1rem;
+}
+.workshop-reels__help {
+  margin-top: 1rem;
+  color: #49645c;
+  font-size: 0.9rem;
+}
+.reels-admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.reels-admin-grid > section {
+  min-width: 0;
+}
+.reels-admin-list {
+  padding: 0;
+  margin: 1rem 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.reels-admin-list li {
+  display: grid;
+  justify-items: start;
+  gap: 0.65rem;
+  padding: 1.2rem;
+  background: white;
+  border: 1px solid #d9c8ac;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+.reels-admin-list a {
+  max-width: 100%;
+  font-size: 0.85rem;
+}
+.reels-admin-list span {
+  color: #49645c;
+  font-size: 0.9rem;
+}
+.reels-visibility {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 44px;
+  margin: 1rem 0;
+}
+.reels-visibility input {
+  width: 20px;
+  height: 20px;
+  accent-color: #10483f;
+}
+.reels-admin-preview {
+  max-width: 440px;
+  margin-top: 1rem;
+}
+.reels-admin-preview > button {
+  margin-bottom: 1rem;
+}
+@media (max-width: 1100px) {
+  .workshop-reels__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reels-admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .workshop-reels__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
