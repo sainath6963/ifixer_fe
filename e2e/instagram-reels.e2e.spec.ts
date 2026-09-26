@@ -68,6 +68,36 @@ for (const width of [360, 390, 768, 1440]) {
     });
   });
 }
+test('homepage shows six reels and the all-reels page shows every published reel', async ({
+  page,
+}) => {
+  await install(page);
+  const items = Array.from({ length: 7 }, (_, index) => ({
+    ...saved,
+    id: String(index + 1).padStart(24, '0'),
+    url: `https://www.instagram.com/reel/WORKSHOP${index + 1}/`,
+    title: `Workshop reel ${index + 1}`,
+    sortOrder: index,
+  }));
+  await page.route('**/api/v1/repair/reels?*', async (route) => {
+    const limit = Number(new URL(route.request().url()).searchParams.get('limit') ?? 6);
+    await route.fulfill({
+      json: {
+        items: items.slice(0, limit),
+        total: items.length,
+        totalPages: Math.ceil(items.length / limit),
+        page: 1,
+      },
+    });
+  });
+  await page.goto('/#workshop-reels');
+  const homepage = page.getByRole('region', { name: 'From our workshop.' });
+  await expect(homepage.locator('.workshop-reel')).toHaveCount(6);
+  await homepage.getByRole('link', { name: 'See all reels' }).click();
+  await expect(page).toHaveURL('/reels');
+  await expect(page.getByRole('heading', { name: 'All our reels.' })).toBeVisible();
+  await expect(page.locator('.reels-page .workshop-reel')).toHaveCount(7);
+});
 test('admin can save a link, edit its order and hide it from the homepage', async ({ page }) => {
   await install(page);
   let item: typeof saved | undefined;

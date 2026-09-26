@@ -18,6 +18,7 @@ export const router = createBrowserRouter([
       { path: 'book-repair/:reference', lazy: () => import('@/pages/repair-booking-page') },
       { path: 'about', lazy: () => import('@/pages/about-page') },
       { path: 'contact', lazy: () => import('@/pages/contact-page') },
+      { path: 'reels', lazy: () => import('@/pages/reels-page') },
       { path: 'catalog', lazy: () => import('@/pages/catalog-page') },
       { path: 'products/:slug', lazy: () => import('@/pages/product-detail-page') },
       { path: 'collections', lazy: () => import('@/pages/catalog-page') },

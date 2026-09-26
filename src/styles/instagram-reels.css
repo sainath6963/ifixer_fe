@@ -31,6 +31,30 @@
   color: #49645c;
   font-size: 0.9rem;
 }
+.workshop-reels__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+.reels-page {
+  padding-top: 3rem;
+}
+.reels-page__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.reels-page__heading h2 {
+  margin: 0;
+}
+.reels-page__heading p {
+  color: #49645c;
+}
+.reels-page__pager button:disabled {
+  cursor: default;
+}
 .reels-admin-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -7,7 +7,7 @@ export interface InstagramReel {
   active?: boolean;
   version?: number;
 }
-interface ReelsPage {
+export interface ReelsPage {
   items: InstagramReel[];
   page: number;
   total: number;
@@ -15,10 +15,10 @@ interface ReelsPage {
 }
 export const reelsApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    instagramReels: builder.query<ReelsPage, { page: number; admin?: boolean }>({
-      query: ({ page, admin }) => ({
+    instagramReels: builder.query<ReelsPage, { page: number; admin?: boolean; limit?: number }>({
+      query: ({ page, admin, limit }) => ({
         url: `${admin ? 'admin/' : ''}repair/reels`,
-        params: { page },
+        params: { page, ...(limit ? { limit } : {}) },
       }),
       providesTags: ['InstagramReel'],
     }),

@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useInstagramReelsQuery, type InstagramReel } from './reels-api';
+
+const homepageLimit = 6;
 
 export function ReelCard({ reel }: { reel: InstagramReel }) {
   const frame = useRef<HTMLIFrameElement>(null);
@@ -64,9 +67,8 @@ export function ReelCard({ reel }: { reel: InstagramReel }) {
   );
 }
 export function WorkshopReels() {
-  const [page, setPage] = useState(1);
   const query = useInstagramReelsQuery(
-    { page },
+    { page: 1, limit: homepageLimit },
     { refetchOnMountOrArgChange: true, refetchOnFocus: true },
   );
   const data = query.data;
@@ -95,21 +97,12 @@ export function WorkshopReels() {
       <p className="workshop-reels__help">
         If a video is unavailable here, use its Instagram link.
       </p>
-      {(data.totalPages > 1 || page > 1) && (
-        <nav className="stock-pager" aria-label="Workshop reel pages">
-          <button disabled={page <= 1 || query.isFetching} onClick={() => setPage(page - 1)}>
-            Previous reels
-          </button>
-          <span>
-            Page {page} of {Math.max(1, data.totalPages)}
-          </span>
-          <button
-            disabled={page >= data.totalPages || query.isFetching}
-            onClick={() => setPage(page + 1)}
-          >
-            Next reels
-          </button>
-        </nav>
+      {data.total > homepageLimit && (
+        <div className="workshop-reels__more">
+          <Link className="repair-button" to="/reels">
+            See all reels <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
       )}
     </section>
   );
