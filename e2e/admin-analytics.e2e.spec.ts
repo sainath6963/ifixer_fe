@@ -28,7 +28,7 @@ async function installAnalyticsStubs(page: Page): Promise<void> {
         contentType: 'text/csv; charset=utf-8',
         headers: {
           'Content-Disposition':
-            'attachment; filename="rich-culture-analytics-2026-08-01-to-2026-08-07.csv"',
+            'attachment; filename="ifixer-analytics-2026-08-01-to-2026-08-07.csv"',
         },
         body: 'Period,Gross sales (INR)\r\n2026-08-01,1000.00\r\n',
       });
@@ -116,5 +116,5 @@ test('admin reviews date-owned analytics and downloads CSV', async ({ page }) =>
 
   const download = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export CSV' }).click();
-  expect((await download).suggestedFilename()).toMatch(/^rich-culture-analytics-/);
+  expect((await download).suggestedFilename()).toMatch(/^ifixer-analytics-/);
 });

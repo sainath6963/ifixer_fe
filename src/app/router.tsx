@@ -86,6 +86,7 @@ export const router = createBrowserRouter([
                 lazy: () => import('@/pages/repair-booking-page'),
               },
               { path: 'analytics', lazy: () => import('@/pages/admin-analytics-page') },
+              { path: 'website', lazy: () => import('@/pages/admin-website-page') },
               { path: 'catalog', lazy: () => import('@/pages/admin-catalog-page') },
               {
                 path: 'catalog/products/:productId',

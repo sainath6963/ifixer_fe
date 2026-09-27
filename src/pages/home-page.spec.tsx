@@ -10,6 +10,10 @@ vi.mock('@/features/instagram-reels/reels-api', () => ({
   }),
 }));
 
+vi.mock('@/features/website/website-activity', () => ({
+  GoogleReviewInvitation: () => null,
+}));
+
 describe('storefront home page', () => {
   it('renders the repair entry point and service navigation', () => {
     render(

@@ -1,6 +1,7 @@
 import { WorkshopReels } from '@/features/instagram-reels/workshop-reels';
 import { Link } from 'react-router-dom';
 import { PageMeta } from '@/app/components/page-meta';
+import { GoogleReviewInvitation } from '@/features/website/website-activity';
 
 const repairs = [
   {
@@ -173,6 +174,7 @@ export function Component() {
         </ol>
       </section>
       <WorkshopReels />
+      <GoogleReviewInvitation />
       <section className="repair-closing">
         <p className="repair-eyebrow">KEEP THE CONNECTION</p>
         <h2>

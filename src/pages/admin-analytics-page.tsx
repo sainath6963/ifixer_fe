@@ -100,7 +100,7 @@ export function Component() {
       const url = URL.createObjectURL(blob);
       const anchor = document.createElement('a');
       anchor.href = url;
-      anchor.download = `rich-culture-analytics-${data?.period.dateFrom ?? 'report'}-to-${data?.period.dateTo ?? 'today'}.csv`;
+      anchor.download = `ifixer-analytics-${data?.period.dateFrom ?? 'report'}-to-${data?.period.dateTo ?? 'today'}.csv`;
       document.body.append(anchor);
       anchor.click();
       anchor.remove();

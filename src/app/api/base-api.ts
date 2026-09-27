@@ -32,6 +32,7 @@ export const baseApi = createApi({
     'StockAlert',
     'AdminCustomer',
     'AdminAnalytics',
+    'Website',
   ],
   endpoints: () => ({}),
 });

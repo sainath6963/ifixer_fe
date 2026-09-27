@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { NavLink, Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
 import { setMobileMenuOpen } from '@/features/ui/ui-slice';
+import { GoogleReviewLink, WebsiteActivity } from '@/features/website/website-activity';
 import { useAppDispatch, useAppSelector } from '../hooks';
 
 const navigation = [
@@ -45,6 +46,7 @@ export function StorefrontLayout() {
   return (
     <>
       <div className="site-shell repair-site">
+        <WebsiteActivity />
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>
@@ -116,6 +118,7 @@ export function StorefrontLayout() {
               <NavLink to="/book-repair">Book a repair</NavLink>
               <NavLink to="/about">About iFixer</NavLink>
               <NavLink to="/contact">Contact</NavLink>
+              <GoogleReviewLink>Review us on Google ↗</GoogleReviewLink>
             </div>
             <div>
               <p>YOUR ACCOUNT</p>

@@ -14,6 +14,7 @@ const navigation = [
   { label: 'Repair team', to: '/admin/repair/team' },
   { label: 'Repair bookings', to: '/admin/repair/bookings' },
   { label: 'Instagram reels', to: '/admin/repair/reels' },
+  { label: 'Website traffic', to: '/admin/website' },
   { label: 'Repair catalog', to: '/admin/repair/services' },
   { label: 'Customers', to: '/admin/customers' },
   { label: 'Notifications', to: '/admin/notifications' },
